@@ -291,7 +291,6 @@ function runDFS() {
 
 
 /***********Dijkstra************/
-
 function runDijkstra() {
   const distances = {};
   const visited = new Set();
@@ -306,6 +305,9 @@ function runDijkstra() {
       distances[`${i}-${j}`] = Infinity;
     }
   }
+      const endTimeInfinitD = performance.now();
+      console.log(((endTimeInfinitD - startTime) / 1000).toFixed(5));
+      
   distances[`${startRow}-${startCol}`] = 0;
 
   pq.push(`${startRow}-${startCol}`, 0);
